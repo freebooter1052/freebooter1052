@@ -15,7 +15,7 @@ I am a passionate Btech student at Viswajyothi College of Engineering and Techno
 
 
 ## Tech Stack
-[![My Skills](https://skillsoft.digitalbadges.skillsoft.com/profile/christinjosebiju327149/wallet)]
+![My Skills](https://skillsoft.digitalbadges.skillsoft.com/profile/christinjosebiju327149/wallet)
 
 ## 🌱 Currently Exploring
 
