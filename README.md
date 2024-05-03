@@ -3,7 +3,7 @@
 
 I am a passionate Btech student at Viswajyothi College of Engineering and Technology,vazhakulam, driven by a curiosity for technology and a love for writing. My journey involves delving into the world of computer science, exploring new ideas, and sharing my insights with the community.
 
-![<username>'s Stats](![<username>'s Stats](https://github-readme-stats.vercel.app/api)
+![<freebooter1052>'s Stats](![<freebooter1052>'s Stats](https://github-readme-stats.vercel.app/api)
 )
 
 ## 🚀 About Me
