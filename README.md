@@ -11,11 +11,11 @@ I am a passionate Btech student at Viswajyothi College of Engineering and Techno
 - ✍️ Content Writer at [medium](https://medium.com/@christinjb100), gearing up to share valuable insights with the global tech community.
 
 ## My Articles
-- [are-we-insimulation](https://medium.com/@christinjb100/are-we-in-a-simulation-f5f4387eeaa6)
-- 
+- [are-we-in-simulation](https://medium.com/@christinjb100/are-we-in-a-simulation-f5f4387eeaa6)
+
 
 ## Tech Stack
-[![My Skills](https://skillsoft.digitalbadges.skillsoft.com/profile/christinjosebiju327149/wallet)
+[![My Skills](https://skillsoft.digitalbadges.skillsoft.com/profile/christinjosebiju327149/wallet)](https://skillsoft.digitalbadges.skillsoft.com)
 
 ## 🌱 Currently Exploring
 
