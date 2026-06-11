@@ -1,0 +1,50 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests feedparser python-dateutil
+
+      - name: Generate README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+          LEETCODE_USERNAME: ${{ secrets.LEETCODE_USERNAME }}
+          MEDIUM_USERNAME: ${{ secrets.MEDIUM_USERNAME }}
+        run: python scripts/generate_readme.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "readme-bot"
+          git config --global user.email "readme-bot@users.noreply.github.com"
+
+          if git diff --quiet README.md; then
+            echo "No changes, skipping commit"
+          else
+            git add README.md scripts/cache.json
+            git commit -m "chore: auto-update README [$(date +'%Y-%m-%d')]"
+            git push
+          fi
