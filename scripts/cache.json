@@ -1,5 +1,9 @@
 {
-  "github_stats": {},
+  "github_stats": {
+    "stars": 1,
+    "commits": 0,
+    "pinned_repos": []
+  },
   "leetcode_stats": {
     "data": {
       "matchedUser": {
@@ -7,11 +11,11 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 193
+              "count": 194
             },
             {
               "difficulty": "Easy",
-              "count": 155
+              "count": 156
             },
             {
               "difficulty": "Medium",
@@ -21,33 +25,59 @@
               "difficulty": "Hard",
               "count": 2
             }
+          ],
+          "totalSubmissionNum": [
+            {
+              "difficulty": "All",
+              "count": 198
+            },
+            {
+              "difficulty": "Easy",
+              "count": 159
+            },
+            {
+              "difficulty": "Medium",
+              "count": 37
+            },
+            {
+              "difficulty": "Hard",
+              "count": 2
+            }
           ]
-        }
+        },
+        "profile": {
+          "ranking": 821013
+        },
+        "submissionCalendar": "{\"1767571200\": 5, \"1767657600\": 10, \"1767744000\": 2, \"1767916800\": 5, \"1768003200\": 1, \"1768176000\": 1, \"1768262400\": 1, \"1769040000\": 1, \"1769385600\": 2, \"1772582400\": 2, \"1774224000\": 4, \"1774396800\": 3, \"1774915200\": 3, \"1775433600\": 1, \"1776470400\": 1, \"1778803200\": 1, \"1778889600\": 1, \"1778976000\": 4, \"1779062400\": 3, \"1779148800\": 3, \"1779235200\": 1, \"1779321600\": 4, \"1779408000\": 3, \"1779580800\": 1, \"1779667200\": 1, \"1779753600\": 2, \"1779840000\": 2, \"1779926400\": 3, \"1780012800\": 2, \"1780099200\": 1, \"1780272000\": 5, \"1780358400\": 1, \"1780444800\": 3, \"1780531200\": 2, \"1780617600\": 2, \"1780704000\": 2, \"1780790400\": 1, \"1780876800\": 5, \"1780963200\": 3, \"1781136000\": 1, \"1781222400\": 1, \"1750809600\": 5, \"1750982400\": 2, \"1752451200\": 5, \"1752537600\": 16, \"1752624000\": 29, \"1752710400\": 24, \"1752796800\": 35, \"1752883200\": 13, \"1752969600\": 7, \"1753056000\": 27, \"1753142400\": 6, \"1753228800\": 18, \"1753315200\": 3, \"1753401600\": 18, \"1753574400\": 1, \"1753660800\": 4, \"1753747200\": 5, \"1754006400\": 1, \"1754870400\": 4, \"1754956800\": 3, \"1755129600\": 1, \"1755907200\": 2, \"1756598400\": 2, \"1756684800\": 7, \"1760140800\": 2, \"1760227200\": 3, \"1761004800\": 1, \"1761091200\": 2, \"1765756800\": 8}"
       }
-    }
+    },
+    "acceptanceRate": 97.98
   },
   "medium_posts": [
     {
       "title": "Learn-Link: A collaborative platform",
       "url": "https://medium.com/@christinjb100/learn-link-a-collaborative-platform-ed05e8ca492c?source=rss-f111797e6d0b------2",
-      "date": "Apr 13, 2025"
+      "date": "Apr 13, 2025",
+      "reading_time": "3 min read"
     },
     {
       "title": "\u201c\u2018Zero To One: Innovative Progress Through Risk-taking\u201d",
       "url": "https://medium.com/@christinjb100/zero-to-one-innovative-progress-through-risk-taking-068a0b3d6b55?source=rss-f111797e6d0b------2",
-      "date": "May 05, 2024"
+      "date": "May 05, 2024",
+      "reading_time": "2 min read"
     },
     {
       "title": "These are the 3 useful websites you must to know\u2026",
       "url": "https://medium.com/@christinjb100/these-are-the-3-useful-websites-you-must-to-know-20e46f5b083b?source=rss-f111797e6d0b------2",
-      "date": "Apr 20, 2022"
+      "date": "Apr 20, 2022",
+      "reading_time": "2 min read"
     }
   ],
   "github_activity": [
-    "\ud83d\udd00 Merged PR in RealNickey/mind",
-    "\ud83d\udd00 Opened PR in RealNickey/mind",
-    "\ud83c\udf89 Created branch RealNickey/mind",
-    "\ud83d\udd00 Merged PR in RealNickey/mind",
-    "\ud83d\ude80 Pushed 0 commit(s) to RealNickey/mind"
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
+    "\ud83d\udd00 Merged PR in freebooter1052/freebooter1052"
   ]
 }
