@@ -12,35 +12,37 @@
   <table>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+        <img src="https://github-readme-stats.vercel.app/api?username=freebooter1052&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
       </td>
       <td align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=freebooter1052&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
       </td>
       <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=freebooter1052&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
       </td>
     </tr>
   </table>
 </div>
 
 <div align="center">
-  <a href="https://leetcode.com/">
-    <img src="https://leetcard.jacoblin.cool/?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
+  <a href="https://leetcode.com/christinjb100">
+    <img src="https://leetcard.jacoblin.cool/christinjb100?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
 </div>
 
 ## 📝 Latest Writing
 
-- No recent posts found.
+- [Learn-Link: A collaborative platform](https://medium.com/@christinjb100/learn-link-a-collaborative-platform-ed05e8ca492c?source=rss-f111797e6d0b------2) - *Apr 13, 2025*
+- [“‘Zero To One: Innovative Progress Through Risk-taking”](https://medium.com/@christinjb100/zero-to-one-innovative-progress-through-risk-taking-068a0b3d6b55?source=rss-f111797e6d0b------2) - *May 05, 2024*
+- [These are the 3 useful websites you must to know…](https://medium.com/@christinjb100/these-are-the-3-useful-websites-you-must-to-know-20e46f5b083b?source=rss-f111797e6d0b------2) - *Apr 20, 2022*
 
 ## ⚡ Recent GitHub Activity
 
-- 🔀 Merged PR in RealNickey/mind
-- 🔀 Opened PR in RealNickey/mind
-- 🎉 Created branch RealNickey/mind
-- 🔀 Merged PR in RealNickey/mind
-- 🚀 Pushed 0 commit(s) to RealNickey/mind
+- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
+- 🔀 Closed PR in freebooter1052/freebooter1052
+- 🔀 Opened PR in freebooter1052/freebooter1052
+- 🎉 Created branch freebooter1052/freebooter1052
+- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
 
 ## 🛠️ Tech Stack
 
@@ -68,5 +70,5 @@
 
 ---
 <div align="center">
-  <p><i>Auto-updated daily via GitHub Actions | Last updated: 2026-06-13 01:56:48 UTC</i></p>
+  <p><i>Auto-updated daily via GitHub Actions | Last updated: 2026-06-13 04:03:13 UTC</i></p>
 </div>

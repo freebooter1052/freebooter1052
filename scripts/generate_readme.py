@@ -116,10 +116,10 @@ def fetch_medium_posts(username):
         return None
 
 
-def generate_readme_content(github_username, leetcode_username, github_activity, medium_posts):
+def generate_readme_content(user_name, github_username, leetcode_username, github_activity, medium_posts):
     # 1. Hero Banner
     hero_banner = f"""<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi,+I'm+{github_username};AI%2FML+Engineer+%7C+Open+Source+%7C+Research" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi,+I'm+{user_name};AI%2FML+Engineer+%7C+Open+Source+%7C+Research" alt="Typing SVG" />
 </div>
 """
 
@@ -229,9 +229,10 @@ def main():
 
     # Environment variables
     github_token = os.environ.get("GITHUB_TOKEN")
-    github_username = os.environ.get("GITHUB_USERNAME", "freebooter1052")
-    leetcode_username = os.environ.get("LEETCODE_USERNAME", "christinjb100")
-    medium_username = os.environ.get("MEDIUM_USERNAME", "christinjb100")
+    user_name = os.environ.get("USER_NAME") or "Christin"
+    github_username = os.environ.get("GITHUB_USERNAME") or "freebooter1052"
+    leetcode_username = os.environ.get("LEETCODE_USERNAME") or "christinjb100"
+    medium_username = os.environ.get("MEDIUM_USERNAME") or "christinjb100"
 
     # Fetch Data with Fallbacks
     print("Fetching GitHub Activity...")
@@ -263,7 +264,7 @@ def main():
 
 
     # Generate README content
-    readme_content = generate_readme_content(github_username, leetcode_username, github_activity, medium_posts)
+    readme_content = generate_readme_content(user_name, github_username, leetcode_username, github_activity, medium_posts)
 
     # Write to README.md
     update_readme(readme_content)
