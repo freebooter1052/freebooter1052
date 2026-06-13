@@ -1,34 +1,53 @@
 {
   "github_stats": {},
   "leetcode_stats": {
-    "errors": [
-      {
-        "message": "That user does not exist.",
-        "locations": [
-          {
-            "line": 3,
-            "column": 9
-          }
-        ],
-        "path": [
-          "matchedUser"
-        ],
-        "extensions": {
-          "handled": true,
-          "skip_sentry": true
+    "data": {
+      "matchedUser": {
+        "submitStats": {
+          "acSubmissionNum": [
+            {
+              "difficulty": "All",
+              "count": 194
+            },
+            {
+              "difficulty": "Easy",
+              "count": 156
+            },
+            {
+              "difficulty": "Medium",
+              "count": 36
+            },
+            {
+              "difficulty": "Hard",
+              "count": 2
+            }
+          ]
         }
       }
-    ],
-    "data": {
-      "matchedUser": null
     }
   },
-  "medium_posts": [],
+  "medium_posts": [
+    {
+      "title": "Learn-Link: A collaborative platform",
+      "url": "https://medium.com/@christinjb100/learn-link-a-collaborative-platform-ed05e8ca492c?source=rss-f111797e6d0b------2",
+      "date": "Apr 13, 2025"
+    },
+    {
+      "title": "\u201c\u2018Zero To One: Innovative Progress Through Risk-taking\u201d",
+      "url": "https://medium.com/@christinjb100/zero-to-one-innovative-progress-through-risk-taking-068a0b3d6b55?source=rss-f111797e6d0b------2",
+      "date": "May 05, 2024"
+    },
+    {
+      "title": "These are the 3 useful websites you must to know\u2026",
+      "url": "https://medium.com/@christinjb100/these-are-the-3-useful-websites-you-must-to-know-20e46f5b083b?source=rss-f111797e6d0b------2",
+      "date": "Apr 20, 2022"
+    }
+  ],
   "github_activity": [
-    "\ud83d\udd00 Merged PR in RealNickey/mind",
-    "\ud83d\udd00 Opened PR in RealNickey/mind",
-    "\ud83c\udf89 Created branch RealNickey/mind",
-    "\ud83d\udd00 Merged PR in RealNickey/mind",
-    "\ud83d\ude80 Pushed 0 commit(s) to RealNickey/mind"
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
+    "\ud83d\udd00 Closed PR in freebooter1052/freebooter1052",
+    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
+    "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052"
   ]
 }
