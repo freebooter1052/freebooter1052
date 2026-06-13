@@ -116,107 +116,6 @@ def fetch_medium_posts(username):
         return None
 
 
-def generate_readme_content(user_name, github_username, leetcode_username, github_activity, medium_posts):
-    # 1. Hero Banner
-    hero_banner = f"""<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi,+I'm+{user_name};AI%2FML+Engineer+%7C+Open+Source+%7C+Research" alt="Typing SVG" />
-</div>
-"""
-
-    # 2. About Me block
-    about_me = """
-## 👨‍💻 About Me
-- 🔭 I'm currently working on exciting AI/ML projects and open-source contributions.
-- 🌱 I'm currently learning advanced machine learning architectures and distributed systems.
-- 👯 I'm looking to collaborate on innovative open-source AI tools.
-- 📫 How to reach me: Connect with me on LinkedIn or Twitter.
-"""
-
-    # 3. GitHub Stats Row
-    github_stats_row = f"""
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
-      </td>
-      <td align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
-      </td>
-      <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={github_username}&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-</div>
-"""
-
-    # 4. LeetCode Stats Card
-    leetcode_stats_card = f"""
-<div align="center">
-  <a href="https://leetcode.com/{leetcode_username}">
-    <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
-  </a>
-</div>
-"""
-
-    # 5. Recent Blog Posts Section
-    blog_posts_section = "\n## 📝 Latest Writing\n\n"
-    if medium_posts:
-        for post in medium_posts:
-            blog_posts_section += f"- [{post['title']}]({post['url']}) - *{post['date']}*\n"
-    else:
-        blog_posts_section += "- No recent posts found.\n"
-
-    # 6. Recent GitHub Activity
-    activity_section = "\n## ⚡ Recent GitHub Activity\n\n"
-    if github_activity:
-        for activity in github_activity:
-            activity_section += f"- {activity}\n"
-    else:
-        activity_section += "- No recent public activity.\n"
-
-    # 7. Tech Stack Badges
-    tech_stack = """
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### Languages
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
-
-### ML/AI Frameworks
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-<img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
-<img src="https://img.shields.io/badge/Hugging_Face-FFAA00?style=flat-square&logo=huggingface&logoColor=white" />
-
-### Tools & Infra
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
-
-</div>
-"""
-
-    # 8. Footer
-    timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    footer = f"""
----
-<div align="center">
-  <p><i>Auto-updated daily via GitHub Actions | Last updated: {timestamp}</i></p>
-</div>
-"""
-
-    # Combine all parts
-    readme_content = f"{hero_banner}{about_me}{github_stats_row}{leetcode_stats_card}{blog_posts_section}{activity_section}{tech_stack}{footer}"
-
-    return readme_content
-
 def update_readme(content):
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(content)
@@ -224,6 +123,7 @@ def update_readme(content):
 # Update main function to call these new functions
 
 def main():
+    import re
     # Load cache
     cache = load_cache()
 
@@ -262,13 +162,82 @@ def main():
     # Save updated cache
     save_cache(cache)
 
+    # 1. GitHub Stats Row
+    github_stats_row = f"""<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+      </td>
+      <td align="center">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
+      </td>
+      <td align="center">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={github_username}&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+      </td>
+    </tr>
+  </table>
+</div>
+"""
 
-    # Generate README content
-    readme_content = generate_readme_content(user_name, github_username, leetcode_username, github_activity, medium_posts)
+    # 2. LeetCode Stats Card
+    leetcode_stats_card = f"""<div align="center">
+  <a href="https://leetcode.com/{leetcode_username}">
+    <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
+  </a>
+</div>"""
 
-    # Write to README.md
-    update_readme(readme_content)
-    print("README.md updated successfully!")
+    stats_content = github_stats_row + "\n" + leetcode_stats_card
+
+    # 3. Recent Blog Posts Section
+    blog_posts_content = ""
+    if medium_posts:
+        for post in medium_posts:
+            blog_posts_content += f"- [{post['title']}]({post['url']}) - *{post['date']}*\n"
+    else:
+        blog_posts_content += "- No recent posts found.\n"
+
+    # 4. Recent GitHub Activity
+    activity_content = ""
+    if github_activity:
+        for activity in github_activity:
+            activity_content += f"- {activity}\n"
+    else:
+        activity_content += "- No recent public activity.\n"
+
+    # Read existing README.md
+    with open("README.md", "r", encoding="utf-8") as f:
+        readme_text = f.read()
+
+    original_readme_text = readme_text
+
+    # Replace sections
+    readme_text = re.sub(
+        r"<!--START:STATS-->.*?<!--END:STATS-->",
+        f"<!--START:STATS-->\n{stats_content}\n<!--END:STATS-->",
+        readme_text,
+        flags=re.DOTALL
+    )
+
+    readme_text = re.sub(
+        r"<!--START:BLOG-->.*?<!--END:BLOG-->",
+        f"<!--START:BLOG-->\n{blog_posts_content}\n<!--END:BLOG-->",
+        readme_text,
+        flags=re.DOTALL
+    )
+
+    readme_text = re.sub(
+        r"<!--START:ACTIVITY-->.*?<!--END:ACTIVITY-->",
+        f"<!--START:ACTIVITY-->\n{activity_content}\n<!--END:ACTIVITY-->",
+        readme_text,
+        flags=re.DOTALL
+    )
+
+    if readme_text != original_readme_text:
+        update_readme(readme_text)
+        print("README.md updated successfully!")
+    else:
+        print("No changes to commit.")
 
 if __name__ == "__main__":
     main()
