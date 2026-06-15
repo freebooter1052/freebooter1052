@@ -8,6 +8,7 @@
 - 👯 I'm looking to collaborate on innovative open-source AI tools.
 - 📫 How to reach me: Connect with me on LinkedIn or Twitter.
 
+<!--START:STATS-->
 <div align="center">
   <table>
     <tr>
@@ -29,21 +30,26 @@
     <img src="https://leetcard.jacoblin.cool/christinjb100?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
 </div>
+<!--END:STATS-->
 
 ## 📝 Latest Writing
 
+<!--START:BLOG-->
 - [Learn-Link: A collaborative platform](https://medium.com/@christinjb100/learn-link-a-collaborative-platform-ed05e8ca492c?source=rss-f111797e6d0b------2) - *Apr 13, 2025*
 - [“‘Zero To One: Innovative Progress Through Risk-taking”](https://medium.com/@christinjb100/zero-to-one-innovative-progress-through-risk-taking-068a0b3d6b55?source=rss-f111797e6d0b------2) - *May 05, 2024*
 - [These are the 3 useful websites you must to know…](https://medium.com/@christinjb100/these-are-the-3-useful-websites-you-must-to-know-20e46f5b083b?source=rss-f111797e6d0b------2) - *Apr 20, 2022*
 
+<!--END:BLOG-->
 ## ⚡ Recent GitHub Activity
 
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
+<!--START:ACTIVITY-->
 - 🔀 Opened PR in RealNickey/mind
+- 🎉 Created branch RealNickey/mind
+- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
+- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
+- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
 
+<!--END:ACTIVITY-->
 ## 🛠️ Tech Stack
 
 <div align="center">
