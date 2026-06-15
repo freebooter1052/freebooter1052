@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi,+I'm+Christin;AI+%7C+Open+Source+%7C+Research" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Hi,+I'm+Christin;AI%2FML+Engineer+%7C+Open+Source+%7C+Research" alt="Typing SVG" />
 </div>
 
 ## 👨‍💻 About Me
@@ -60,6 +60,11 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
 <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
 
+### ML/AI Frameworks
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
+<img src="https://img.shields.io/badge/Hugging_Face-FFAA00?style=flat-square&logo=huggingface&logoColor=white" />
 
 ### Tools & Infra
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
@@ -71,5 +76,5 @@
 
 ---
 <div align="center">
-  <p><i>Auto-updated daily via GitHub Actions | Last updated: 2026-06-13 04:03:13 UTC</i></p>
+  <p><i>Auto-updated daily via GitHub Actions | Last updated: 2026-06-15 02:10:30 UTC</i></p>
 </div>
