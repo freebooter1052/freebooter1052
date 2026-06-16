@@ -127,7 +127,7 @@ def generate_stats_content(github_username, leetcode_username):
         <img src="https://github-readme-stats.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
       </td>
       <td align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
+        <img src="https://streak-stats.demolab.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
       </td>
       <td align="center">
         <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={github_username}&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
