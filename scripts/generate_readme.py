@@ -169,7 +169,7 @@ def replace_chunk(content, marker, chunk):
     )
     if not r.search(content):
         return content
-    return r.sub(rf"\1{chunk}\n\2", content)
+    return r.sub(lambda m: f"{m.group(1)}{chunk}\n{m.group(2)}", content)
 
 def update_readme(stats_content, blog_content, activity_content):
     with open("README.md", "r", encoding="utf-8") as f:
