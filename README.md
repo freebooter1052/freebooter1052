@@ -41,12 +41,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
-- 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
+- ⭐ Starred majidmanzarpour/threejs-game-skills
 - 🔀 Opened PR in freebooter1052/freebooter1052
 - 🎉 Created branch freebooter1052/freebooter1052
 - 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
+- 🔀 Merged PR in freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
