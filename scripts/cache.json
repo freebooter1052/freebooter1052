@@ -7,7 +7,7 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 204
+              "count": 206
             },
             {
               "difficulty": "Easy",
@@ -15,7 +15,7 @@
             },
             {
               "difficulty": "Medium",
-              "count": 41
+              "count": 43
             },
             {
               "difficulty": "Hard",
@@ -44,10 +44,10 @@
     }
   ],
   "github_activity": [
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/Threejs-games",
+    "\ud83c\udf89 Created branch freebooter1052/Threejs-games",
     "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
     "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
-    "\u2b50 Starred majidmanzarpour/threejs-game-skills",
-    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
-    "\ud83c\udf89 Created branch freebooter1052/freebooter1052"
+    "\ud83d\udd00 Opened PR in web-platform-tests/wpt"
   ]
 }
