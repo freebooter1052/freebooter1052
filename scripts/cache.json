@@ -7,11 +7,11 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 206
+              "count": 207
             },
             {
               "difficulty": "Easy",
-              "count": 161
+              "count": 162
             },
             {
               "difficulty": "Medium",
@@ -44,10 +44,10 @@
     }
   ],
   "github_activity": [
-    "\ud83d\udd00 Opened PR in web-platform-tests/wpt",
-    "\ud83c\udf89 Created branch freebooter1052/wpt",
-    "\ud83c\udf74 Forked web-platform-tests/wpt",
+    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
+    "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/Threejs-games",
     "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052",
-    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052"
+    "\ud83d\ude80 Pushed 0 commit(s) to freebooter1052/freebooter1052"
   ]
 }
