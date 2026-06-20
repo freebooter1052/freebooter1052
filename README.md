@@ -41,11 +41,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
 - 🚀 Pushed 0 commit(s) to freebooter1052/Threejs-games
 - 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
 - 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
+- 🚀 Pushed 0 commit(s) to freebooter1052/Threejs-games
+- 🎉 Created branch freebooter1052/Threejs-games
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
