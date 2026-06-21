@@ -41,11 +41,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
-- 🚀 Pushed 0 commit(s) to freebooter1052/Threejs-games
+- ⭐ Starred EpicGames/lore
 - 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
 - 🚀 Pushed 0 commit(s) to freebooter1052/freebooter1052
-- 🚀 Pushed 0 commit(s) to freebooter1052/Threejs-games
-- 🎉 Created branch freebooter1052/Threejs-games
+- 🔀 Opened PR in freebooter1052/freebooter1052
+- 🎉 Created branch freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
