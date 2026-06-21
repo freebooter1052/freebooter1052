@@ -164,12 +164,12 @@ def generate_activity_content(github_activity):
 
 def replace_chunk(content, marker, chunk):
     r = re.compile(
-        rf"(<!--START:{marker}-->\n).*?(<!--END:{marker}-->)",
+        rf"(<!--START:{marker}-->\s*).*?(<!--END:{marker}-->)",
         re.DOTALL,
     )
     if not r.search(content):
         return content
-    return r.sub(lambda m: f"{m.group(1)}{chunk}\n{m.group(2)}", content)
+    return r.sub(lambda m: f"<!--START:{marker}-->\n{chunk}\n{m.group(2)}", content)
 
 def update_readme(stats_content, blog_content, activity_content):
     with open("README.md", "r", encoding="utf-8") as f:
