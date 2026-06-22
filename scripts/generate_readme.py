@@ -195,10 +195,18 @@ def update_readme(stats_content, blog_content, activity_content):
     new_content = replace_chunk(new_content, "BLOG", blog_content)
     new_content = replace_chunk(new_content, "ACTIVITY", activity_content)
 
-    # Check for differences
+    # Check for differences in dynamic sections (excluding timestamp)
     if new_content == readme_content:
         print("No changes in dynamic sections. Skipping file update.")
         return False
+
+    # Update the timestamp
+    now_utc = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    new_content = re.sub(
+        r"Last updated: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC",
+        f"Last updated: {now_utc} UTC",
+        new_content
+    )
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(new_content)
