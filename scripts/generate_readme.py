@@ -41,7 +41,7 @@ def fetch_github_activity(username, token):
             activity_str = ""
             if event_type == "PushEvent":
                 commits = event.get("payload", {}).get("commits", [])
-                commit_count = len(commits)
+                commit_count = event.get("payload", {}).get("size", len(commits))
                 activity_str = f"🚀 Pushed {commit_count} commit(s) to {repo_name}"
             elif event_type == "WatchEvent":
                 activity_str = f"⭐ Starred {repo_name}"
@@ -169,7 +169,7 @@ def replace_chunk(content, marker, chunk):
     )
     if not r.search(content):
         return content
-    return r.sub(lambda m: f"<!--START:{marker}-->\n{chunk}\n{m.group(2)}", content)
+    return r.sub(lambda m: f"{m.group(1)}{chunk}\n{m.group(2)}", content)
 
 def update_readme(stats_content, blog_content, activity_content):
     with open("README.md", "r", encoding="utf-8") as f:
