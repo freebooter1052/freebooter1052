@@ -40,8 +40,23 @@ def fetch_github_activity(username, token):
 
             activity_str = ""
             if event_type == "PushEvent":
-                commits = event.get("payload", {}).get("commits", [])
-                commit_count = event.get("payload", {}).get("size", len(commits))
+                payload = event.get("payload", {})
+                commits = payload.get("commits", [])
+                commit_count = payload.get("size")
+                if commit_count is None:
+                    commit_count = len(commits)
+                if commit_count == 0 and payload.get("before") and payload.get("head"):
+                    try:
+                        compare_url = f"https://api.github.com/repos/{repo_name}/compare/{payload['before']}...{payload['head']}"
+                        cmp_res = requests.get(compare_url, headers=headers, timeout=5)
+                        if cmp_res.status_code == 200:
+                            commit_count = cmp_res.json().get("total_commits", 1)
+                        else:
+                            commit_count = 1
+                    except Exception:
+                        commit_count = 1
+                elif commit_count == 0:
+                    commit_count = 1
                 activity_str = f"🚀 Pushed {commit_count} commit(s) to {repo_name}"
             elif event_type == "WatchEvent":
                 activity_str = f"⭐ Starred {repo_name}"
