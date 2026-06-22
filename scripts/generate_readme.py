@@ -40,8 +40,23 @@ def fetch_github_activity(username, token):
 
             activity_str = ""
             if event_type == "PushEvent":
-                commits = event.get("payload", {}).get("commits", [])
-                commit_count = len(commits)
+                payload = event.get("payload", {})
+                commits = payload.get("commits", [])
+                commit_count = payload.get("size")
+                if commit_count is None:
+                    commit_count = len(commits)
+                if commit_count == 0 and payload.get("before") and payload.get("head"):
+                    try:
+                        compare_url = f"https://api.github.com/repos/{repo_name}/compare/{payload['before']}...{payload['head']}"
+                        cmp_res = requests.get(compare_url, headers=headers, timeout=5)
+                        if cmp_res.status_code == 200:
+                            commit_count = cmp_res.json().get("total_commits", 1)
+                        else:
+                            commit_count = 1
+                    except Exception:
+                        commit_count = 1
+                elif commit_count == 0:
+                    commit_count = 1
                 activity_str = f"🚀 Pushed {commit_count} commit(s) to {repo_name}"
             elif event_type == "WatchEvent":
                 activity_str = f"⭐ Starred {repo_name}"
@@ -169,7 +184,7 @@ def replace_chunk(content, marker, chunk):
     )
     if not r.search(content):
         return content
-    return r.sub(lambda m: f"<!--START:{marker}-->\n{chunk}\n{m.group(2)}", content)
+    return r.sub(lambda m: f"{m.group(1)}{chunk}\n{m.group(2)}", content)
 
 def update_readme(stats_content, blog_content, activity_content):
     with open("README.md", "r", encoding="utf-8") as f:
@@ -180,10 +195,18 @@ def update_readme(stats_content, blog_content, activity_content):
     new_content = replace_chunk(new_content, "BLOG", blog_content)
     new_content = replace_chunk(new_content, "ACTIVITY", activity_content)
 
-    # Check for differences
+    # Check for differences in dynamic sections (excluding timestamp)
     if new_content == readme_content:
         print("No changes in dynamic sections. Skipping file update.")
         return False
+
+    # Update the timestamp
+    now_utc = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    new_content = re.sub(
+        r"Last updated: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC",
+        f"Last updated: {now_utc} UTC",
+        new_content
+    )
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(new_content)
