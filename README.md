@@ -41,11 +41,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
+- 🚀 Pushed 3 commit(s) to freebooter1052/queue-cure
+- 🚀 Pushed 2 commit(s) to freebooter1052/queue-cure
 - 🔀 Opened PR in freebooter1052/queue-cure
 - 🔀 Opened PR in freebooter1052/queue-cure
 - 🔀 Opened PR in freebooter1052/queue-cure
-- 🔀 Assigned PR in freebooter1052/queue-cure
-- 🔀 Opened PR in freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack

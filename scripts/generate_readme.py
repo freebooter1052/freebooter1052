@@ -200,14 +200,6 @@ def update_readme(stats_content, blog_content, activity_content):
         print("No changes in dynamic sections. Skipping file update.")
         return False
 
-    # Update the timestamp
-    now_utc = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-    new_content = re.sub(
-        r"Last updated: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC",
-        f"Last updated: {now_utc} UTC",
-        new_content
-    )
-
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(new_content)
     return True
