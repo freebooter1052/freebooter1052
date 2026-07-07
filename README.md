@@ -13,13 +13,13 @@
   <table>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=freebooter1052&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+        <img src="https://github-readme-stats-fast.vercel.app/api?username=freebooter1052&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
       </td>
       <td align="center">
         <img src="https://streak-stats.demolab.com/?user=freebooter1052&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
       </td>
       <td align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=freebooter1052&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+        <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=freebooter1052&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
       </td>
     </tr>
   </table>
@@ -43,8 +43,8 @@
 <!--START:ACTIVITY-->
 - 🔀 Opened PR in freebooter1052/freebooter1052
 - 🎉 Created branch freebooter1052/freebooter1052
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
+- 🔀 Merged PR in freebooter1052/freebooter1052
+- 🚀 Pushed 2 commit(s) to freebooter1052/freebooter1052
 - 🔀 Opened PR in freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
