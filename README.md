@@ -45,7 +45,7 @@
 - 🎉 Created branch freebooter1052/freebooter1052
 - 🔀 Opened PR in freebooter1052/freebooter1052
 - 🎉 Created branch freebooter1052/freebooter1052
-- 🔀 Opened PR in freebooter1052/freebooter1052
+- 🔀 Merged PR in freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
