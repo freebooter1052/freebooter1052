@@ -7,11 +7,11 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 226
+              "count": 227
             },
             {
               "difficulty": "Easy",
-              "count": 172
+              "count": 173
             },
             {
               "difficulty": "Medium",
@@ -46,8 +46,8 @@
   "github_activity": [
     "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
     "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
-    "\ud83d\udd00 Opened PR in freebooter1052/multi-agent-reports",
-    "\ud83c\udf89 Created branch freebooter1052/multi-agent-reports",
-    "\ud83d\udd00 Merged PR in freebooter1052/multi-agent-reports"
+    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052",
+    "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
+    "\ud83d\udd00 Opened PR in freebooter1052/multi-agent-reports"
   ]
 }
