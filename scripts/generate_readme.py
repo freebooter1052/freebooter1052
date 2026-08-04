@@ -81,6 +81,17 @@ def fetch_github_activity(username, token):
         print(f"Error fetching GitHub activity: {e}")
         return None
 
+def check_github_stats_api(username):
+    url = f"https://github-readme-stats-fast.vercel.app/api?username={username}"
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200 and "Something went wrong" not in response.text:
+            return True
+        return False
+    except Exception as e:
+        print(f"Error checking GitHub Stats API: {e}")
+        return False
+
 def fetch_leetcode_stats(username):
     url = "https://leetcode.com/graphql"
     query = """
@@ -133,8 +144,8 @@ def fetch_medium_posts(username):
 
 import re
 
-def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+def generate_stats_content(github_username, leetcode_username, github_api_ok=True):
+    github_stats_block = f"""
 <div align="center">
   <table>
     <tr>
@@ -150,14 +161,22 @@ def generate_stats_content(github_username, leetcode_username):
     </tr>
   </table>
 </div>
+""" if github_api_ok else ""
 
+    leetcode_stats_block = f"""
 <div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
 </div>
 """
-    return github_stats_row.strip("\n")
+
+    if github_stats_block:
+        content = github_stats_block + "\n" + leetcode_stats_block
+    else:
+        content = leetcode_stats_block
+
+    return content.strip("\n")
 
 def generate_blog_content(medium_posts):
     blog_posts_section = ""
@@ -243,9 +262,17 @@ def main():
     # Save updated cache
     save_cache(cache)
 
+    # Check API status
+    print("Checking GitHub Stats API status...")
+    github_api_ok = check_github_stats_api(github_username)
+    if not github_api_ok:
+        print("GitHub Stats API seems to be broken. Omitting GitHub stats.")
+    else:
+        print("GitHub Stats API is responsive.")
+
 
     # Generate section contents
-    stats_content = generate_stats_content(github_username, leetcode_username)
+    stats_content = generate_stats_content(github_username, leetcode_username, github_api_ok)
     blog_content = generate_blog_content(medium_posts)
     activity_content = generate_activity_content(github_activity)
 
