@@ -133,13 +133,35 @@ def fetch_medium_posts(username):
 
 import re
 
+def is_image_api_broken(url):
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code != 200:
+            return True
+        if "Something went wrong" in response.text:
+            return True
+        return False
+    except Exception:
+        return True
+
 def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+    main_stats_url = f"https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117"
+
+    if is_image_api_broken(main_stats_url):
+        github_stats_row = f"""
+<div align="center">
+  <a href="https://leetcode.com/{leetcode_username}">
+    <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
+  </a>
+</div>
+"""
+    else:
+        github_stats_row = f"""
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+        <img src="{main_stats_url}" alt="GitHub Stats" />
       </td>
       <td align="center">
         <img src="https://streak-stats.demolab.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
