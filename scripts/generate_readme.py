@@ -133,9 +133,19 @@ def fetch_medium_posts(username):
 
 import re
 
-def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
-<div align="center">
+def check_github_stats_api(username):
+    url = f"https://github-readme-stats-fast.vercel.app/api?username={username}"
+    try:
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200 and "Something went wrong" not in response.text:
+            return True
+        return False
+    except Exception as e:
+        print(f"Error checking GitHub stats API: {e}")
+        return False
+
+def generate_stats_content(github_username, leetcode_username, is_github_stats_up=True):
+    github_stats_html = f"""<div align="center">
   <table>
     <tr>
       <td align="center">
@@ -150,14 +160,16 @@ def generate_stats_content(github_username, leetcode_username):
     </tr>
   </table>
 </div>
+""" if is_github_stats_up else ""
 
-<div align="center">
+    leetcode_stats_html = f"""<div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
 </div>
 """
-    return github_stats_row.strip("\n")
+
+    return (github_stats_html + "\n" + leetcode_stats_html if is_github_stats_up else leetcode_stats_html).strip("\n")
 
 def generate_blog_content(medium_posts):
     blog_posts_section = ""
@@ -244,8 +256,13 @@ def main():
     save_cache(cache)
 
 
+    # Check GitHub Stats API
+    is_github_stats_up = check_github_stats_api(github_username)
+    if not is_github_stats_up:
+        print("GitHub stats API is down. Omitting GitHub stats section.")
+
     # Generate section contents
-    stats_content = generate_stats_content(github_username, leetcode_username)
+    stats_content = generate_stats_content(github_username, leetcode_username, is_github_stats_up)
     blog_content = generate_blog_content(medium_posts)
     activity_content = generate_activity_content(github_activity)
 
