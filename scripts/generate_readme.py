@@ -134,12 +134,24 @@ def fetch_medium_posts(username):
 import re
 
 def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+    github_stats_api_url = f"https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117"
+
+    github_api_ok = False
+    try:
+        res = requests.get(github_stats_api_url, timeout=5)
+        if res.status_code == 200 and "Something went wrong" not in res.text:
+            github_api_ok = True
+    except Exception:
+        pass
+
+    github_stats_html = ""
+    if github_api_ok:
+        github_stats_html = f"""
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+        <img src="{github_stats_api_url}" alt="GitHub Stats" />
       </td>
       <td align="center">
         <img src="https://streak-stats.demolab.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
@@ -150,14 +162,17 @@ def generate_stats_content(github_username, leetcode_username):
     </tr>
   </table>
 </div>
+"""
 
+    leetcode_stats_html = f"""
 <div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
 </div>
 """
-    return github_stats_row.strip("\n")
+
+    return (github_stats_html + leetcode_stats_html).strip("\n")
 
 def generate_blog_content(medium_posts):
     blog_posts_section = ""
