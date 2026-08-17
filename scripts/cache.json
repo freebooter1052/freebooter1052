@@ -7,7 +7,7 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 241
+              "count": 242
             },
             {
               "difficulty": "Easy",
@@ -15,7 +15,7 @@
             },
             {
               "difficulty": "Medium",
-              "count": 59
+              "count": 60
             },
             {
               "difficulty": "Hard",
@@ -48,6 +48,6 @@
     "\ud83c\udf89 Created branch freebooter1052/freebooter1052",
     "\ud83d\udd00 Opened PR in freebooter1052/multi-agent-reports",
     "\ud83c\udf89 Created branch freebooter1052/multi-agent-reports",
-    "\ud83d\udd00 Opened PR in freebooter1052/freebooter1052"
+    "\ud83d\udd00 Opened PR in freebooter1052/multi-agent-reports"
   ]
 }
