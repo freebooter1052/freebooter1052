@@ -133,8 +133,21 @@ def fetch_medium_posts(username):
 
 import re
 
+def check_github_stats_api(username):
+    url = f"https://github-readme-stats-fast.vercel.app/api?username={username}&show_icons=true&theme=dark"
+    try:
+        response = requests.get(url, timeout=10)
+        if response.status_code != 200:
+            return False
+        if "Something went wrong" in response.text:
+            return False
+        return True
+    except Exception:
+        return False
+
 def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+    if check_github_stats_api(github_username):
+        github_stats_row = f"""
 <div align="center">
   <table>
     <tr>
@@ -151,6 +164,14 @@ def generate_stats_content(github_username, leetcode_username):
   </table>
 </div>
 
+<div align="center">
+  <a href="https://leetcode.com/{leetcode_username}">
+    <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
+  </a>
+</div>
+"""
+    else:
+        github_stats_row = f"""
 <div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
