@@ -10,22 +10,6 @@
 
 <!--START:STATS-->
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api?username=freebooter1052&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
-      </td>
-      <td align="center">
-        <img src="https://streak-stats.demolab.com/?user=freebooter1052&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
-      </td>
-      <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=freebooter1052&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
   <a href="https://leetcode.com/christinjb100">
     <img src="https://leetcard.jacoblin.cool/christinjb100?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
@@ -41,11 +25,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
-- 🎉 Created branch freebooter1052/multi-agent-reports
-- 🔀 Opened PR in freebooter1052/freebooter1052
-- 🎉 Created branch freebooter1052/freebooter1052
+- 🔀 Opened PR in freebooter1052/multi-agent-reports
 - 🎉 Created branch freebooter1052/multi-agent-reports
 - 🔀 Opened PR in freebooter1052/multi-agent-reports
+- 🎉 Created branch freebooter1052/multi-agent-reports
+- 🎉 Created branch freebooter1052/freebooter1052
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
