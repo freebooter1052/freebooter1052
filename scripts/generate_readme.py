@@ -133,31 +133,55 @@ def fetch_medium_posts(username):
 
 import re
 
+def is_image_api_valid(url):
+    try:
+        response = requests.get(url, timeout=5)
+        if response.status_code != 200:
+            return False
+        if "Something went wrong" in response.text:
+            return False
+        return True
+    except requests.exceptions.RequestException:
+        return False
+
 def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+    github_stats_url = f"https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117"
+    streak_url = f"https://streak-stats.demolab.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117"
+    top_langs_url = f"https://github-readme-stats-fast.vercel.app/api/top-langs/?username={github_username}&layout=compact&theme=dark&hide_border=true&bg_color=0d1117"
+
+    content = ""
+
+    # Check GitHub APIs
+    if is_image_api_valid(github_stats_url) and is_image_api_valid(streak_url) and is_image_api_valid(top_langs_url):
+        content += f"""
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api?username={github_username}&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117" alt="GitHub Stats" />
+        <img src="{github_stats_url}" alt="GitHub Stats" />
       </td>
       <td align="center">
-        <img src="https://streak-stats.demolab.com/?user={github_username}&theme=dark&hide_border=true&background=0d1117" alt="GitHub Streak" />
+        <img src="{streak_url}" alt="GitHub Streak" />
       </td>
       <td align="center">
-        <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username={github_username}&layout=compact&theme=dark&hide_border=true&bg_color=0d1117" alt="Top Languages" />
+        <img src="{top_langs_url}" alt="Top Languages" />
       </td>
     </tr>
   </table>
 </div>
-
-<div align="center">
-  <a href="https://leetcode.com/{leetcode_username}">
-    <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
-  </a>
-</div>
 """
-    return github_stats_row.strip("\n")
+
+    leetcode_url = f"https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity"
+
+    if content:
+        content += "\n"
+
+    content += f"""<div align="center">
+  <a href="https://leetcode.com/{leetcode_username}">
+    <img src="{leetcode_url}" alt="LeetCode Stats" />
+  </a>
+</div>"""
+    return content.strip("\n")
 
 def generate_blog_content(medium_posts):
     blog_posts_section = ""
