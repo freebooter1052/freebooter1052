@@ -130,12 +130,23 @@ def fetch_medium_posts(username):
         print(f"Error fetching Medium posts: {e}")
         return None
 
+def check_github_stats_api(github_username):
+    url = f"https://github-readme-stats-fast.vercel.app/api?username={github_username}"
+    try:
+        response = requests.get(url, timeout=5)
+        if response.status_code == 200 and "Something went wrong" not in response.text:
+            return True
+        return False
+    except Exception as e:
+        print(f"Error checking GitHub stats API: {e}")
+        return False
 
 import re
 
-def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
-<div align="center">
+def generate_stats_content(github_username, leetcode_username, github_stats_working=True):
+    github_stats_row = ""
+    if github_stats_working:
+        github_stats_row += f"""<div align="center">
   <table>
     <tr>
       <td align="center">
@@ -151,12 +162,12 @@ def generate_stats_content(github_username, leetcode_username):
   </table>
 </div>
 
-<div align="center">
+"""
+    github_stats_row += f"""<div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
-</div>
-"""
+</div>"""
     return github_stats_row.strip("\n")
 
 def generate_blog_content(medium_posts):
@@ -245,7 +256,8 @@ def main():
 
 
     # Generate section contents
-    stats_content = generate_stats_content(github_username, leetcode_username)
+    github_stats_working = check_github_stats_api(github_username)
+    stats_content = generate_stats_content(github_username, leetcode_username, github_stats_working)
     blog_content = generate_blog_content(medium_posts)
     activity_content = generate_activity_content(github_activity)
 
