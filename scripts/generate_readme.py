@@ -133,8 +133,30 @@ def fetch_medium_posts(username):
 
 import re
 
-def generate_stats_content(github_username, leetcode_username):
-    github_stats_row = f"""
+def check_github_stats_api(github_username):
+    urls = [
+        f"https://github-readme-stats-fast.vercel.app/api?username={github_username}",
+        f"https://streak-stats.demolab.com/?user={github_username}",
+        f"https://github-readme-stats-fast.vercel.app/api/top-langs/?username={github_username}"
+    ]
+    for url in urls:
+        try:
+            res = requests.get(url, timeout=10)
+            if res.status_code != 200:
+                print(f"Failed status {res.status_code} for {url}")
+                return False
+            if "Something went wrong" in res.text:
+                print(f"Something went wrong for {url}")
+                return False
+        except Exception as e:
+            print(f"Exception {e} for {url}")
+            return False
+    return True
+
+def generate_stats_content(github_username, leetcode_username, github_stats_ok):
+    github_stats_row = ""
+    if github_stats_ok:
+        github_stats_row += f"""
 <div align="center">
   <table>
     <tr>
@@ -151,12 +173,12 @@ def generate_stats_content(github_username, leetcode_username):
   </table>
 </div>
 
-<div align="center">
+"""
+    github_stats_row += f"""<div align="center">
   <a href="https://leetcode.com/{leetcode_username}">
     <img src="https://leetcard.jacoblin.cool/{leetcode_username}?theme=dark&font=Nunito&ext=activity" alt="LeetCode Stats" />
   </a>
-</div>
-"""
+</div>"""
     return github_stats_row.strip("\n")
 
 def generate_blog_content(medium_posts):
@@ -245,7 +267,8 @@ def main():
 
 
     # Generate section contents
-    stats_content = generate_stats_content(github_username, leetcode_username)
+    github_stats_ok = check_github_stats_api(github_username)
+    stats_content = generate_stats_content(github_username, leetcode_username, github_stats_ok)
     blog_content = generate_blog_content(medium_posts)
     activity_content = generate_activity_content(github_activity)
 
