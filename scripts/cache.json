@@ -7,11 +7,11 @@
           "acSubmissionNum": [
             {
               "difficulty": "All",
-              "count": 247
+              "count": 248
             },
             {
               "difficulty": "Easy",
-              "count": 180
+              "count": 181
             },
             {
               "difficulty": "Medium",
@@ -44,10 +44,10 @@
     }
   ],
   "github_activity": [
+    "\ud83d\ude80 Pushed 1 commit(s) to freebooter1052/AEC_Management_System",
     "\ud83c\udf89 Created branch freebooter1052/AEC_Management_System",
     "\ud83d\ude80 Pushed 1 commit(s) to freebooter1052/AEC_Management_System",
     "\ud83c\udf89 Created branch freebooter1052/AEC_Management_System",
-    "\ud83d\ude80 Pushed 1 commit(s) to freebooter1052/emergency-queue",
-    "\ud83c\udf89 Created branch freebooter1052/emergency-queue"
+    "\ud83d\ude80 Pushed 1 commit(s) to freebooter1052/emergency-queue"
   ]
 }
