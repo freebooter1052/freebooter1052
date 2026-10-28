@@ -41,11 +41,11 @@
 
 ## ⚡ Recent GitHub Activity
 <!--START:ACTIVITY-->
+- 🔀 Opened PR in freebooter1052/emergency-queue
 - 🚀 Pushed 1 commit(s) to freebooter1052/AEC_Management_System
 - 🎉 Created branch freebooter1052/AEC_Management_System
 - 🚀 Pushed 1 commit(s) to freebooter1052/AEC_Management_System
 - 🎉 Created branch freebooter1052/AEC_Management_System
-- 🚀 Pushed 1 commit(s) to freebooter1052/emergency-queue
 <!--END:ACTIVITY-->
 
 ## 🛠️ Tech Stack
